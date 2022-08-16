@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 .background{
     position: absolute;
@@ -13,3 +14,69 @@
     height: 100%
     
 }
+details{
+    align-items: center;
+}
+.card-details{
+    display: inline-block;
+}
+#card-front{
+    align-items: center;
+    color: white;
+    background-image: url("./images/bg-card-front.png");
+    height: 500px;
+    width: 1000px;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-bottom: 0px;
+    position: relative;
+    z-index: -3;
+}
+.circles{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.big-circle{
+    border-radius: 5rem;
+    height: 2.5em;
+    width: 2.5em;
+    background-color: white;
+}
+.small-circle{
+    border-radius: 5rem;
+    border: 2px solid white;
+    height: 1.5em;
+    width: 1.5em;
+    padding-left: 5px !important;
+}
+#card-number{
+    font-size: xx-large;
+    letter-spacing: 2px;
+    padding-top: 2rem;
+}
+.card-holder{
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 17px;
+    padding-top: 2px;
+}
+span{
+    padding-left: 11rem;
+}
+.card-back{
+    background-image: url("./images/bg-card-back.png");
+    height: 500px;
+    width: 1000px;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: larger;
+}
+.cvc-display{
+    color: white;
+    display: inline-block;
+}
+  

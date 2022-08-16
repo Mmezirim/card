@@ -5,9 +5,14 @@ for (let x = 0; x < test.length; x++){
 
 const number = [23,34,54,34,67,3,56],
 text = ""
-for (let x in number){
-    console.log(number[x]);
+for (let x of number){
+    console.log(x);
 }
+
+const date = new Date()
+console.log(date)
+
+
 const numbers = [45, 4, 9, 16, 25];
 
 let txt = "";
@@ -28,7 +33,7 @@ do{
 }
 while (i < 20);
 
-for (let x = 0; x < 10; x++){
-  if (x===4){break}
+for (let x = 11; x < 100; x++){
+  if (x===4){continue}
   console.log("The number is " + x)
 }
