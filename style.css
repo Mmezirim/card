@@ -2,10 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Space Grotesk", Helvetica, Arial, sans-serif;
+}
+body{
+
 }
 .background{
-    position: absolute;
+    position: fixed;
     z-index: -9999;
     background-image: url("/images/bg-main-desktop.png");
     background-size: cover;
@@ -14,24 +17,32 @@
     height: 100%
     
 }
-details{
+.container{
+    display: flex;
+    justify-content: center;
     align-items: center;
+    padding-top: 15%;
+    margin: 0% 10%;
+    flex-wrap: no-wrap;
+    gap: 2%;
 }
+
 .card-details{
-    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 2%;
+    position: relative;
 }
 #card-front{
     align-items: center;
     color: white;
     background-image: url("./images/bg-card-front.png");
-    height: 500px;
-    width: 1000px;
+    height: 20rem;
+
     background-repeat: no-repeat;
     align-items: center;
     padding-left: 1.5rem;
     padding-bottom: 0px;
-    position: relative;
-    z-index: -3;
+    margin-left: -9%;
 }
 .circles{
     display: inline-flex;
@@ -69,14 +80,64 @@ span{
 }
 .card-back{
     background-image: url("./images/bg-card-back.png");
-    height: 500px;
-    width: 1000px;
+    height: 40rem;
+    width: 950px;
     background-repeat: no-repeat;
     color: white;
     font-size: larger;
+    margin-left: 10%;
 }
 .cvc-display{
+    padding: 6.9rem 6.9rem 0rem 22.5rem;
     color: white;
-    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+}
+::placeholder{
+    color: rgb(208, 208, 208);
+    font-size: 20px;
+}
+input{
+    border: 1.5px solid rgb(208, 208, 208);
+    font-size: 20px;
+    padding-left: 5px;
+    flex-shrink: 0%;
+}
+.form-class{
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 80%;
+    margin-top: -15%;
+}
+.inputs{
+    height: 4rem;
+    width: 80%;
+    border-radius: 0.5rem;
+    margin-top: auto;
+}
+.form-divider{
+    display: flex;
+    max-width: 80%;
+}
+
+.smaller-inputs{
+    height: 4rem;
+    width: 45%;
+    border-radius: 0.5rem;
+}
+.CVC-input{
+    height: 4rem;
+    border-radius: 0.5rem; 
+}
+.button{
+    max-width: 80%;
+    padding: 1rem ;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: medium;
+    background-color: black;
 }
   

@@ -11,23 +11,80 @@
     <div class="card-sample">
         <div class="background"></div>
     </div>
-    <section>
-        <div class="details">
-            <div class="card-details">
-                <div id="card-front">
-                    <div class="circles">
-                        <div class="big-circle"></div>
-                        <div class="small-circle"></div>
+        <div class="container">
+            <div class="details">
+                <main>
+                    <div class="card-details">
+                        <div id="card-front">
+                            <div class="circles">
+                                <div class="big-circle"></div>
+                                <div class="small-circle"></div>
+                            </div>
+                            <div id="card-number">0000 0000 0000 0000</div>  
+                            <br>             
+                            <div class="card-holder">JANE APPLESEED  <span>00/00</span></div>
+                        </div>
+                        <div class="card-back">
+                            <p class="cvc-display" id="cvc-display">000</p>
+                        </div>
                     </div>
-                    <div id="card-number">0000 0000 0000 0000</div>  
-                    <br>             
-                    <div class="card-holder">JANE APPLESEED  <span>00/00</span></div>
-                </div>
-                <div class="card-back">
-                    <p class="cvc-display" id="cvc-display">000</p>
-                </div>
-            </div>
+                </main>
+            </div>    
+                <form action="#" class="form-class">
+                    <label for="Cardholder">CARDHOLDER NAME</label>
+                    <input 
+                    class="inputs"
+                    type="text"
+                    placeholder="  e.g. Jane appleseed"
+                    aria-label="Card holder name" 
+                    pattern="[^\s^\d]+\s[^\s^\d]+"
+                    required
+                    />
+                    <label for="Card number">CARD NUMBER</label>
+                    <input 
+                    class="inputs"
+                    type="numbers"
+                    placeholder="  e.g. 1234 5678 9123 0000"
+                    aria-label="Card number" 
+                    pattern="^(\d{4}\s){3}(\d{4})"
+                    required
+                    />
+                    <div class="form-divider">
+                        <div class="expiry-date-input">
+                            <label for="expiry-date">EXP. DATE</label>
+                            </br>
+                            <input 
+                             class="smaller-inputs"
+                             type="numbers"
+                             placeholder=" MM"
+                             aria-label="Card expiration year input" 
+                             pattern="\d\d"
+                             required
+                             />
+                            <input 
+                             class="smaller-inputs"
+                             type="numbers"
+                             placeholder=" YY"
+                             aria-label="Card expiration year input" 
+                             pattern="\d\d"
+                             required
+                             />
+                        </div>
+                        <div>     
+                         <label for="CVC">CVC</label>
+                         <br>
+                            <input 
+                             class="CVC-input"
+                             type="digits"
+                             placeholder=" e.g. 123"
+                             aria-label="CVC number" 
+                             pattern="\d\d\d"
+                             required
+                             />
+                        </div>
+                    </div>
+                        <button class="button"> confirm </button>
+                </form>
         </div>
-    </section>
 </body>
 </html>
