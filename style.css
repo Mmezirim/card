@@ -185,6 +185,9 @@ a{
 }
 /*******MEDIA QUERY2*********/
 @media (max-width:1005px) {
+    html{
+        font-size: 62.5%;
+    }
     .background{
         position: absolute;
         background-image: url("./images/bg-main-mobile.png");
