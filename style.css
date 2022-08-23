@@ -1,43 +1,37 @@
+/*********MAIN CSS*********/
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Space Grotesk", Helvetica, Arial, sans-serif;
 }
-body{
-
-}
-.background{
-    position: fixed;
+.background {
+    position: absolute;
     z-index: -9999;
     background-image: url("/images/bg-main-desktop.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 30%;
-    height: 100%
-    
-}
+    height: 100%;
+  }
 .container{
     display: flex;
-    justify-content: center;
+    justify-content: center ;
     align-items: center;
     padding-top: 15%;
-    margin: 0% 10%;
-    flex-wrap: no-wrap;
-    gap: 2%;
+    position: relative;
+    flex-shrink: inherit;
 }
-
 .card-details{
     font-family: 'Courier New', Courier, monospace;
-    margin-left: 2%;
-    position: relative;
+    margin-left: 15%;
+    flex-shrink: 10%;
 }
 #card-front{
     align-items: center;
     color: white;
     background-image: url("./images/bg-card-front.png");
     height: 20rem;
-
     background-repeat: no-repeat;
     align-items: center;
     padding-left: 1.5rem;
@@ -62,7 +56,7 @@ body{
     border: 2px solid white;
     height: 1.5em;
     width: 1.5em;
-    padding-left: 5px !important;
+    padding-left: 5px;
 }
 #card-number{
     font-size: xx-large;
@@ -98,18 +92,20 @@ span{
     font-size: 20px;
 }
 input{
-    border: 1.5px solid rgb(208, 208, 208);
+    border: 2px solid rgb(224, 224, 224);
     font-size: 20px;
     padding-left: 5px;
-    flex-shrink: 0%;
 }
-.form-class{
-    display: flex;
-    flex-direction: column;
+.forms{
+  max-width: 100%;
+}
+form{
+    display:grid;
     line-height: 3rem;
     font-family: 'Courier New', Courier, monospace;
     max-width: 80%;
-    margin-top: -15%;
+    margin-top: -40%;
+    flex-shrink: 0;
 }
 .inputs{
     height: 4rem;
@@ -120,18 +116,23 @@ input{
 .form-divider{
     display: flex;
     max-width: 80%;
+    flex-shrink: 0;
 }
-
+.expiry-date-input{
+    flex-shrink: 5;
+}
 .smaller-inputs{
     height: 4rem;
     width: 45%;
     border-radius: 0.5rem;
+    position: relative;
 }
 .CVC-input{
     height: 4rem;
     border-radius: 0.5rem; 
+    inset: 0;
 }
-.button{
+button{
     max-width: 80%;
     padding: 1rem ;
     margin-top: 2rem;
@@ -139,5 +140,77 @@ input{
     color: white;
     font-size: medium;
     background-color: black;
+    cursor: pointer;
 }
-  
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: baseline; 
+}
+a{
+    text-decoration: none;
+    padding-left: 4px;
+    color: blue;
+}
+/********MEDIA QUERY1*********/
+@media (max-width:1600px){
+    .background{
+        position: absolute;
+        background-image: url("./images/bg-main-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 150%;
+        height: 400px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 50%;
+    }    
+    #cvc-display{
+        position: absolute;
+    }
+    .card-back{
+        margin-top: -13%;   
+    }
+    form{
+        max-width: max-content;
+    }
+    footer{
+        justify-content: baseline;
+        padding-top: 40%;
+        padding-left: 30%;
+    }
+}
+/*******MEDIA QUERY2*********/
+@media (max-width:1005px) {
+    .background{
+        position: absolute;
+        background-image: url("./images/bg-main-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200%;
+        height: 400px;
+    }
+    .container{
+        margin-left: 50%;
+    }
+    form{
+        width: 100rem;
+    }
+    main{
+       margin-left: 33%;
+    }
+    .card-details{
+        margin-left: -2%;
+    }
+}
+@media (max-width:680px) {
+    .background{
+        width: 500%;
+        height: 400px;
+    }
+    body{
+        margin-right: -70%;
+    }
+}

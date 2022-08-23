@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card-sample">
+    <div>
         <div class="background"></div>
-    </div>
-        <div class="container">
+    </div>  
+    <div class="container">
             <div class="details">
                 <main>
                     <div class="card-details">
@@ -29,8 +29,9 @@
                         </div>
                     </div>
                 </main>
-            </div>    
-                <form action="#" class="form-class">
+            </div>   
+            <div class="forms">
+                <form action="#">
                     <label for="Cardholder">CARDHOLDER NAME</label>
                     <input 
                     class="inputs"
@@ -51,7 +52,7 @@
                     />
                     <div class="form-divider">
                         <div class="expiry-date-input">
-                            <label for="expiry-date">EXP. DATE</label>
+                            <label for="expiry-date">EXP. DATE (MM/YY)</label>
                             </br>
                             <input 
                              class="smaller-inputs"
@@ -67,6 +68,7 @@
                              placeholder=" YY"
                              aria-label="Card expiration year input" 
                              pattern="\d\d"
+                             size="25"
                              required
                              />
                         </div>
@@ -85,6 +87,10 @@
                     </div>
                         <button class="button"> confirm </button>
                 </form>
+            </div> 
         </div>
+        <footer>
+            Created by <a href="https://github.com/Mmezirim"> Chimmezirim</a>
+        </footer>
 </body>
 </html>
