@@ -187,6 +187,7 @@ a{
 @media (max-width:1005px) {
     html{
         font-size: 62.5%;
+        max-width: fit-content;
     }
     .background{
         position: absolute;
@@ -210,6 +211,11 @@ a{
     }
 }
 @media (max-width:680px) {
+    html{
+        font-size: 62.5%;
+        height: min-content;
+        width: min-content;
+    }
     .background{
         width: 500%;
         height: 400px;
